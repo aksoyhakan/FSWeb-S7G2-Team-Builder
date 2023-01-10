@@ -16,6 +16,8 @@ const RegisterForm = (props) => {
     dataRegisterSet,
     memberRevised,
     revisedMemberSet,
+    memberRevising,
+    revisingMemberSet,
   } = props;
 
   console.log(memberRevised);
@@ -72,9 +74,9 @@ const RegisterForm = (props) => {
       console.log("Veriler başarılı bir şekilde değiştirildi.");
       setNewMember(dummyMember);
       revisedMemberSet(dummyMember);
-      dataRegisterSet(true);
+      revisingMemberSet(true);
       setTimeout(() => {
-        dataRegisterSet(false);
+        revisingMemberSet(false);
       }, 1500);
     }
   }
@@ -162,7 +164,9 @@ const RegisterForm = (props) => {
       {registerData && (
         <p>Girdiğiniz datalar başarılı bir şekilde kaydedilmiştir.</p>
       )}
-      {}
+      {memberRevising && (
+        <p>Girdiğiniz datalar başarılı bir revize edilmiştir.</p>
+      )}
     </div>
   );
 };

@@ -9,7 +9,7 @@ const ShowMembers = (props) => {
       <div
         style={{
           maxWidth: "800px",
-          margin: "2rem auto",
+          margin: "2rem auto 0rem auto",
           borderBottom: "0.2rem solid black",
         }}
       >
@@ -24,18 +24,46 @@ const ShowMembers = (props) => {
         <div
           style={{
             maxWidth: "800px",
-            margin: "2rem auto",
+            margin: "0rem auto",
             borderBottom: "0.2rem solid black",
           }}
         >
-          <p style={{ width: "15%", display: "inline-block" }}>{item.name}</p>
-          <p style={{ width: "15%", display: "inline-block" }}>
+          <p
+            style={{
+              width: "15%",
+              display: "inline-block",
+              verticalAlign: "center",
+            }}
+          >
+            {item.name}
+          </p>
+          <p
+            style={{
+              width: "15%",
+              display: "inline-block",
+              verticalAlign: "center",
+            }}
+          >
             {item.surname}
           </p>
-          <p style={{ width: "15%", display: "inline-block" }}>
+          <p
+            style={{
+              width: "15%",
+              display: "inline-block",
+              verticalAlign: "center",
+            }}
+          >
             {item.position}
           </p>
-          <p style={{ width: "10%", display: "inline-block" }}>{item.age}</p>
+          <p
+            style={{
+              width: "10%",
+              display: "inline-block",
+              verticalAlign: "center",
+            }}
+          >
+            {item.age}
+          </p>
           <p
             style={{
               width: "25%",
@@ -45,7 +73,13 @@ const ShowMembers = (props) => {
           >
             {item.email}
           </p>
-          <div style={{ width: "10%", display: "inline-block" }}>
+          <div
+            style={{
+              width: "10%",
+              display: "inline-block",
+              verticalAlign: "center",
+            }}
+          >
             <button
               onClick={() => {
                 console.log(item);

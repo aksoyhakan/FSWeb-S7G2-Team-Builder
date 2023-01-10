@@ -17,7 +17,9 @@ const dummyMember = {
 function App() {
   const [members, setMembers] = useState(firstMembers);
   const [dataRegister, setDataRegister] = useState(false);
+
   const [revisedMember, setRevisedMember] = useState(dummyMember);
+  const [revisingMember, setRevisingMember] = useState(false);
 
   console.log(members);
   return (
@@ -29,6 +31,8 @@ function App() {
         dataRegisterSet={setDataRegister}
         memberRevised={revisedMember}
         revisedMemberSet={setRevisedMember}
+        memberRevising={revisingMember}
+        revisingMemberSet={setRevisingMember}
       ></RegisterForm>
       <ShowMembers
         membersData={members}
